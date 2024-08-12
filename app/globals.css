@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+a {
+  color: #282c3f;
+}
+
+@media (max-width: 961px) {
+  .shop-base {
+    padding-top: 5px;
+  }
+}
+
+@media (min-width: 1174px) {
+  .desktop-query {
+    width: 320px !important;
+  }
+}
