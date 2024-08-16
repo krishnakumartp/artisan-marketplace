@@ -13,9 +13,67 @@ a {
   color: #282c3f;
 }
 
+.slick-dots li button:before {
+  font-size: 24px;
+  font-family: monospace;
+}
+
+.slick-dots-custom li {
+  width: 4px !important;
+  height: 4px !important;
+  margin: 0 3px !important;
+}
+
+.slick-dots-custom li button {
+  width: 4px !important;
+  height: 4px !important;
+  padding: 0 !important;
+}
+
+.slick-dots-custom li button::before {
+  font-size: 14px;
+  line-height: 4px;
+  width: 4px;
+  height: 4px;
+}
+
+.slick-dots-custom li.slick-active button:before {
+  color: #ff3f6c;
+}
+
+.slick-list {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.filter-search-expanded {
+  width: 221px;
+  border-radius: 15px;
+}
+
 @media (max-width: 961px) {
   .shop-base {
     padding-top: 5px;
+  }
+
+  .slick-dots li, .slick-dots li button, .slick-dots li button:before {
+    width: 10px !important;
+    height: 10px !important;
+    line-height: 10px;
+    font-size: 20px;
+    bottom: -7px;
+    font-family: monospace;
+  }
+}
+
+@media (max-width: 574px) {
+  .slick-dots li, .slick-dots li button, .slick-dots li button:before {
+    width: 4px !important;
+    height: 4px !important;
+    line-height: 4px;
+    font-size: 12px;
+    bottom: -4px;
+    font-family: monospace;
   }
 }
 

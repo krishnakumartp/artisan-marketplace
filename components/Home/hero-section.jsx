@@ -1,5 +1,8 @@
+"use client";
+import { sliderSettings } from "@/configs/slider-config";
 import Image from "next/image";
 import Link from "next/link";
+import Slider from "react-slick";
 
 const HeroSection = () => {
     return (
@@ -31,41 +34,46 @@ const HeroSection = () => {
                 </div>
             </div>
             {/* Main Banner */}
-            <div className="mx-w-full my-0 mx-auto box-border w-full relative overflow-hidden bg-no-repeat">
-                <div className="my-0 mx-auto">
-                    <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
-                        <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
-                            <div className="box-border relative overflow-hidden bg-no-repeat w-full">
-                                <div className="pb-[59.37%]">
-                                    <div className="my-0 mx-auto absolute inset-0">
-                                        <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
-                                            <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
-                                                <Link href="https://www.myntra.com/online-fashion-store?f=Gender%3Amen%2Cmen%20women">
-                                                    <div>
-                                                        <picture draggable="false" className="img-responsive">
-                                                            <source srcSet="/images/hero-banner-1.jpeg" type="image/webp" /><Image draggable="false" className="absolute inset-0 h-auto w-full transition-all duration-200 ease-in-out" src="/images/hero-banner-1.jpeg" srcSet="" alt="Banner" height={570} width={960} />
-                                                        </picture>
+            <Slider {...sliderSettings}>
+                {Array.from({ length: 10 }, (_, index) => index + 1).map(elm =>
+                    <div className="mx-w-full my-0 mx-auto box-border w-full relative overflow-hidden bg-no-repeat" key={elm}>
+                        <div className="my-0 mx-auto">
+                            <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
+                                <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
+                                    <div className="box-border relative overflow-hidden bg-no-repeat w-full">
+                                        <div className="pb-[59.37%]">
+                                            <div className="my-0 mx-auto absolute inset-0">
+                                                <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
+                                                    <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
+                                                        <Link href="https://www.myntra.com/online-fashion-store?f=Gender%3Amen%2Cmen%20women">
+                                                            <div>
+                                                                <picture draggable="false" className="img-responsive">
+                                                                    <source srcSet="/images/hero-banner-1.jpeg" type="image/webp" />
+                                                                    <Image draggable="false" className="absolute inset-0 h-auto w-full transition-all duration-200 ease-in-out" src="/images/hero-banner-1.jpeg" srcSet="" alt="Banner" height={570} width={960} />
+                                                                </picture>
+                                                            </div>
+                                                        </Link>
                                                     </div>
-                                                </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
-                            <div className="box-border relative overflow-hidden bg-no-repeat w-full">
-                                <div className="pb-[59.37%]">
-                                    <div className="my-0 mx-auto absolute inset-0">
-                                        <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
-                                            <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
-                                                <Link href="https://www.myntra.com/online-fashion-store?f=Gender%3Amen%20women%2Cwomen">
-                                                    <div>
-                                                        <picture draggable="false" className="img-responsive">
-                                                            <source srcSet="/images/hero-banner-2.jpeg" type="image/webp" /><Image draggable="false" className="absolute inset-0 h-auto w-full transition-all duration-200 ease-in-out" src="/images/hero-banner-2.jpeg" srcSet="" alt="Banner" height={570} width={960} />
-                                                        </picture>
+                                <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
+                                    <div className="box-border relative overflow-hidden bg-no-repeat w-full">
+                                        <div className="pb-[59.37%]">
+                                            <div className="my-0 mx-auto absolute inset-0">
+                                                <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
+                                                    <div className="flex-grow flex-shrink basis-0 self-start flex-wrap flex-col">
+                                                        <Link href="https://www.myntra.com/online-fashion-store?f=Gender%3Amen%20women%2Cwomen">
+                                                            <div>
+                                                                <picture draggable="false" className="img-responsive">
+                                                                    <source srcSet="/images/hero-banner-2.jpeg" type="image/webp" /><Image draggable="false" className="absolute inset-0 h-auto w-full transition-all duration-200 ease-in-out" src="/images/hero-banner-2.jpeg" srcSet="" alt="Banner" height={570} width={960} />
+                                                                </picture>
+                                                            </div>
+                                                        </Link>
                                                     </div>
-                                                </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -73,10 +81,10 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                )}
+            </Slider>
             {/* Shop By Category Title */}
-            <div className="mx-w-full my-0 mx-auto box-border w-full relative overflow-hidden bg-no-repeat">
+            <div className="mx-w-full my-0 mx-auto box-border w-full relative overflow-hidden bg-no-repeat" >
                 <div className="pb-[6.25%]">
                     <div className="my-0 mx-auto absolute inset-0">
                         <div className="flex flex-row flex-wrap justify-start items-stretch content-stretch after:clear-both after:content-[''] after:table">
@@ -692,7 +700,7 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

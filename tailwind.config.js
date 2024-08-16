@@ -10,7 +10,7 @@ module.exports = {
       screens: {
         "xs": "576",
         "3xl": "1600"
-      }
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,272 @@
+[
+    {
+        "label": "Green",
+        "value": "Green",
+        "count": "52793",
+        "bgColor": "bg-[#5EB160]"
+    },
+    {
+        "label": "Pink",
+        "value": "Pink",
+        "count": "49149",
+        "bgColor": "bg-[#F0A9C4]"
+    },
+    {
+        "label": "Gold",
+        "value": "Gold",
+        "count": "48589",
+        "bgColor": "bg-[#E5C74A]"
+    },
+    {
+        "label": "Blue",
+        "value": "Blue",
+        "count": "46276",
+        "bgColor": "bg-[#0074D9]"
+    },
+    {
+        "label": "Black",
+        "value": "Black",
+        "count": "34146",
+        "bgColor": "bg-[#111111]"
+    },
+    {
+        "label": "Red",
+        "value": "Red",
+        "count": "33130",
+        "bgColor": "bg-[#D24A55]"
+    },
+    {
+        "label": "Yellow",
+        "value": "Yellow",
+        "count": "27931",
+        "bgColor": "bg-[#EADB32]"
+    },
+    {
+        "label": "Silver",
+        "value": "Silver",
+        "count": "21395",
+        "bgColor": "bg-[#B3B3B3]"
+    },
+    {
+        "label": "White",
+        "value": "White",
+        "count": "20596",
+        "bgColor": "bg-[#ffffff]"
+    },
+    {
+        "label": "Maroon",
+        "value": "Maroon",
+        "count": "18664",
+        "bgColor": "bg-[#B02F60]"
+    },
+    {
+        "label": "Grey",
+        "value": "Grey",
+        "count": "18557",
+        "bgColor": "bg-[#9FA8AB]"
+    },
+    {
+        "label": "Navy Blue",
+        "value": "Navy Blue",
+        "count": "18422",
+        "bgColor": "bg-[#3C4476]"
+    },
+    {
+        "label": "Purple",
+        "value": "Purple",
+        "count": "17865",
+        "bgColor": "bg-[#800080]"
+    },
+    {
+        "label": "Peach",
+        "value": "Peach",
+        "count": "12891",
+        "bgColor": "bg-[#FFE5B4]"
+    },
+    {
+        "label": "Beige",
+        "value": "Beige",
+        "count": "12469",
+        "bgColor": "bg-[#E8E6CF]"
+    },
+    {
+        "label": "Orange",
+        "value": "Orange",
+        "count": "11941",
+        "bgColor": "bg-[#F18D21]"
+    },
+    {
+        "label": "Teal",
+        "value": "Teal",
+        "count": "9354",
+        "bgColor": "bg-[#008080]"
+    },
+    {
+        "label": "Mustard",
+        "value": "Mustard",
+        "count": "9283",
+        "bgColor": "bg-[#CC9C33]"
+    },
+    {
+        "label": "Brown",
+        "value": "Brown",
+        "count": "9106",
+        "bgColor": "bg-[#915039]"
+    },
+    {
+        "label": "Turquoise Blue",
+        "value": "Turquoise Blue",
+        "count": "7379",
+        "bgColor": "bg-[#40E0D0]"
+    },
+    {
+        "label": "Cream",
+        "value": "Cream",
+        "count": "6999",
+        "bgColor": "bg-[#EDE6B9]"
+    },
+    {
+        "label": "Off White",
+        "value": "Off White",
+        "count": "6831",
+        "bgColor": "bg-[#F2F2F2]"
+    },
+    {
+        "label": "Sea Green",
+        "value": "Sea Green",
+        "count": "6373",
+        "bgColor": "bg-[#2E8B57]"
+    },
+    {
+        "label": "Magenta",
+        "value": "Magenta",
+        "count": "4778",
+        "bgColor": "bg-[#B8529E]"
+    },
+    {
+        "label": "Olive",
+        "value": "Olive",
+        "count": "3957",
+        "bgColor": "bg-[#3D9970]"
+    },
+    {
+        "label": "Multi",
+        "value": "Multi",
+        "count": "3726",
+        "bgColor": "bg-transparent"
+    },
+    {
+        "label": "Burgundy",
+        "value": "Burgundy",
+        "count": "3358",
+        "bgColor": "bg-[#A03245]"
+    },
+    {
+        "label": "Lavender",
+        "value": "Lavender",
+        "count": "3186",
+        "bgColor": "bg-[#D6D6E5]"
+    },
+    {
+        "label": "Lime Green",
+        "value": "Lime Green",
+        "count": "2593",
+        "bgColor": "bg-[#5DB653]"
+    },
+    {
+        "label": "Rust",
+        "value": "Rust",
+        "count": "2347",
+        "bgColor": "bg-[#B6410E]"
+    },
+    {
+        "label": "Mauve",
+        "value": "Mauve",
+        "count": "1922",
+        "bgColor": "bg-[#DFB0FF]"
+    },
+    {
+        "label": "Coral",
+        "value": "Coral",
+        "count": "1543",
+        "bgColor": "bg-[#FF7F4F]"
+    },
+    {
+        "label": "Coffee Brown",
+        "value": "Coffee Brown",
+        "count": "729",
+        "bgColor": "bg-[#4B302F]"
+    },
+    {
+        "label": "Charcoal",
+        "value": "Charcoal",
+        "count": "628",
+        "bgColor": "bg-[#36454F]"
+    },
+    {
+        "label": "Rose",
+        "value": "Rose",
+        "count": "598",
+        "bgColor": "bg-[#DC2F86]"
+    },
+    {
+        "label": "Copper",
+        "value": "Copper",
+        "count": "296",
+        "bgColor": "bg-[#AA6C38]"
+    },
+    {
+        "label": "Fluorescent Green",
+        "value": "Fluorescent Green",
+        "count": "290",
+        "bgColor": "bg-[#8DC049]"
+    },
+    {
+        "label": "Tan",
+        "value": "Tan",
+        "count": "257",
+        "bgColor": "bg-[#D2B48C]"
+    },
+    {
+        "label": "Khaki",
+        "value": "Khaki",
+        "count": "257",
+        "bgColor": "bg-[#C3B091]"
+    },
+    {
+        "label": "Taupe",
+        "value": "Taupe",
+        "count": "251",
+        "bgColor": "bg-[#483B32]"
+    },
+    {
+        "label": "Metallic",
+        "value": "Metallic",
+        "count": "233",
+        "bgColor": "bg-[#DFD0C4]"
+    },
+    {
+        "label": "Grey Melange",
+        "value": "Grey Melange",
+        "count": "183",
+        "bgColor": "bg-[#9FA8AB]"
+    },
+    {
+        "label": "Bronze",
+        "value": "Bronze",
+        "count": "177",
+        "bgColor": "bg-[#CB813F]"
+    },
+    {
+        "label": "Nude",
+        "value": "Nude",
+        "count": "116",
+        "bgColor": "bg-[#DBAF96]"
+    },
+    {
+        "label": "Steel",
+        "value": "Steel",
+        "count": "22",
+        "bgColor": "bg-[#B3B3B3]"
+    }
+]

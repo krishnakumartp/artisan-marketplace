@@ -1,0 +1,38 @@
+[
+    {
+        "label": "10% and above",
+        "value": "10.0 TO 100.0"
+    },
+    {
+        "label": "20% and above",
+        "value": "20.0 TO 100.0"
+    },
+    {
+        "label": "30% and above",
+        "value": "30.0 TO 100.0"
+    },
+    {
+        "label": "40% and above",
+        "value": "40.0 TO 100.0"
+    },
+    {
+        "label": "50% and above",
+        "value": "50.0 TO 100.0"
+    },
+    {
+        "label": "60% and above",
+        "value": "60.0 TO 100.0"
+    },
+    {
+        "label": "70% and above",
+        "value": "70.0 TO 100.0"
+    },
+    {
+        "label": "80% and above",
+        "value": "80.0 TO 100.0"
+    },
+    {
+        "label": "90% and above",
+        "value": "90.0 TO 100.0"
+    }
+]
