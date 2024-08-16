@@ -117,7 +117,7 @@ const HeroSection = () => {
                                     >
                                         <div className="pb-[130.62%]">
                                             <div className="absolute inset-0">
-                                                <Link href="https://www.myntra.com/men-casual-wear?plaEnabled=false&rf=Discount%20Range%3A40.0_100.0_40.0%20TO%20100.0">
+                                                <Link href="/product-list">
                                                     <picture draggable="false" className="img-responsive">
                                                         <source srcSet={item.src} type="image/webp" />
                                                         <Image
