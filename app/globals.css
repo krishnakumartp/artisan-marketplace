@@ -52,10 +52,6 @@ a {
 }
 
 @media (max-width: 961px) {
-  .shop-base {
-    padding-top: 5px;
-  }
-
   .slick-dots li, .slick-dots li button, .slick-dots li button:before {
     width: 10px !important;
     height: 10px !important;

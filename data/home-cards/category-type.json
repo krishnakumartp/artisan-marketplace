@@ -1,0 +1,112 @@
+[
+    {
+        "rowData": [
+            {
+                "src": "/images/ethnic-wear.jpeg"
+            },
+            {
+                "src": "/images/casual-wear.jpeg"
+            },
+            {
+                "src": "/images/men-active-wear.jpeg"
+            },
+            {
+                "src": "/images/women-active-wear.jpeg"
+            },
+            {
+                "src": "/images/western-wear.jpeg"
+            },
+            {
+                "src": "/images/sports-wear.jpeg"
+            }
+        ]
+    },
+    {
+        "rowData": [
+            {
+                "src": "/images/lounge-wear.jpeg"
+            },
+            {
+                "src": "/images/inner-wear.jpeg"
+            },
+            {
+                "src": "/images/lingerie.jpeg"
+            },
+            {
+                "src": "/images/watches.jpeg"
+            },
+            {
+                "src": "/images/grooming.jpeg"
+            },
+            {
+                "src": "/images/beauty-and-makeup.jpeg"
+            }
+        ]
+    },
+    {
+        "rowData": [
+            {
+                "src": "/images/kids-wear.jpeg"
+            },
+            {
+                "src": "/images/men-footwear.jpeg"
+            },
+            {
+                "src": "/images/women-footwear.jpeg"
+            },
+            {
+                "src": "/images/bags-belts.jpeg"
+            },
+            {
+                "src": "/images/office-wear.jpeg"
+            },
+            {
+                "src": "/images/men-ethnic-wear.jpeg"
+            }
+        ]
+    },
+    {
+        "rowData": [
+            {
+                "src": "/images/home-decor.jpeg"
+            },
+            {
+                "src": "/images/handbags.jpeg"
+            },
+            {
+                "src": "/images/headphones.jpeg"
+            },
+            {
+                "src": "/images/jewellery.jpeg"
+            },
+            {
+                "src": "/images/size-inclusive-styles.jpeg"
+            },
+            {
+                "src": "/images/inclusive-styles.jpeg"
+            }
+        ]
+    },
+    {
+        "rowData": [
+            {
+                "src": "/images/watches-and-wearables.jpeg"
+            },
+            {
+                "src": "/images/sleepwear.jpeg"
+            },
+            {
+                "src": "/images/workwear.jpeg"
+            },
+            {
+                "src": "/images/eyewear.jpeg"
+            },
+            {
+                "src": "/images/women-workwear.jpeg"
+            },
+            {
+                "src": "/images/casual-styles.jpeg"
+            }
+        ]
+    }
+]

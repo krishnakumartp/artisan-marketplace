@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 z-10 bg-white shadow-[#0000000D_0px_4px_12px_0px]">
+        <header className="fixed top-0 left-0 right-0 z-10 bg-white shadow-[#0000000D_0px_4px_12px_0px] hidden lg:block">
             <div className="m-auto min-w-[980px] leading-[80px]">
                 {/* Logo */}
                 <div className="float-left ml-[2%] xl:ml-[4%]">

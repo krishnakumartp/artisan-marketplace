@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Navbar from "@/components/Navbar/navbar";
+import MobileNavbar from "@/components/Navbar/mobile-navbar";
 
 const assistant = Assistant({ subsets: ["hebrew", "latin", "latin-ext"], display: 'auto' });
 
@@ -16,6 +17,7 @@ export default function RootLayout ({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={assistant.className}>
         <Navbar />
+        <MobileNavbar />
         {children}
       </body>
     </html>
