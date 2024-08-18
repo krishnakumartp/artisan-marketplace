@@ -50,7 +50,7 @@ const ProductCard = ({ data }) => {
                 </div>
             </div>
 
-            <Link href="/product-details" className="block" target="_blank">
+            <Link href="/product-view/black" className="block" target="_blank">
                 {/* Image and Hover Slider */}
                 <div className="relative w-[210px] h-[280px]">
                     {showSlider ?

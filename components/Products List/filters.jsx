@@ -8,7 +8,7 @@ import discountList from "/data/filters/discount-list.json";
 import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const Filters = () => {
+const Filters = ({ isOpen }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const pathName = usePathname();
@@ -64,7 +64,7 @@ const Filters = () => {
     }, [pathName, searchParams]);
 
     const toggleSearchInput = (e, id) => {
-        e.stopPropagation();
+        e?.stopPropagation();
         const inputContainer = document.getElementById(id);
         const inputEl = document.querySelector(`#${id} input`);
         const iconEl = document.querySelector(`#${id} span`);
@@ -76,6 +76,7 @@ const Filters = () => {
             inputEl.classList.remove('hidden');
             inputEl.focus();
         } else {
+            if(document.activeElement === inputEl) return
             inputContainer.style.cssText = "";
             iconEl.style.cssText = "";
             inputEl.classList.add('hidden');
@@ -118,7 +119,7 @@ const Filters = () => {
 
 
     return (
-        <div className="flex-[1_1_0%] min-w-[252px] max-w-[252px] !flex-grow-0 self-start flex-wrap flex-col filter-section">
+        <div className={`flex-[1_1_0%] min-w-[252px] ${!isOpen ? 'max-w-[252px]' : ''} !flex-grow-0 self-start flex-wrap flex-col filter-section`}>
             <section>
                 <div className="box-border transition-margin duration-200 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mt-0 pt-[23px]">
                     <div className="relative border-r-0 pt-0px pb-[15px] pl-[25px] border-b-[1px] border-b-[#e9e9ed]">
@@ -155,9 +156,9 @@ const Filters = () => {
                     <div className="relative pt-[20px] pb-[15px] pl-[25px] border-b-[1px] border-b-[#e9e9ed] border-r-[1px] border-r-[#edebef]">
                         <span className="font-bold uppercase text-[14px] mb-[18px] clear-both text-[#282c3f] block">Brand</span>
 
-                        <div className="absolute top-[12px] right-[14px] w-[30px] h-[30px] bg-[#f5f5f6] rounded-full" id="brand-container" onClick={() => toggleSearchInput("brand-container", true)}>
+                        <div className="absolute top-[12px] right-[14px] w-[30px] h-[30px] bg-[#f5f5f6] rounded-full" id="brand-container" onClick={(e) => toggleSearchInput(e, "brand-container", true)}>
                             <input className="hidden bg-transparent outline-none border-none text-[14px] h-full w-full absolute right-0 px-[33px] py-[2px] pl-[14px]" placeholder="Search for Brand" onChange={(e) => filterSearch("brand-container", e.target?.value || '')}></input>
-                            <span className="inline-block absolute cursor-pointer right-1 top-1 scale-75 w-[21px] h-[21px] bg-[url('/images/icons.png')] bg-[-754px_0] bg-[length:1404px_105px]" onClick={(e) => toggleSearchInput("brand-container", false)}></span>
+                            <span className="inline-block absolute cursor-pointer right-1 top-1 scale-75 w-[21px] h-[21px] bg-[url('/images/icons.png')] bg-[-754px_0] bg-[length:1404px_105px]" onClick={(e) => toggleSearchInput(e, "brand-container", false)}></span>
                         </div>
 
                         <ul className="m-0 pl-0">
@@ -196,9 +197,9 @@ const Filters = () => {
                     <div className="relative pt-[20px] pb-[15px] pl-[25px] border-b-[1px] border-b-[#e9e9ed] border-r-[1px] border-r-[#edebef]">
                         <span className="font-bold uppercase text-[14px] mb-[18px] clear-both text-[#282c3f] block">Color</span>
 
-                        <div className="absolute top-[12px] right-[14px] w-[30px] h-[30px] bg-[#f5f5f6] rounded-full" id="color-container" onClick={() => toggleSearchInput("color-container", true)}>
+                        <div className="absolute top-[12px] right-[14px] w-[30px] h-[30px] bg-[#f5f5f6] rounded-full" id="color-container" onClick={(e) => toggleSearchInput(e, "color-container", true)}>
                             <input className="hidden bg-transparent outline-none border-none text-[14px] h-full w-full absolute right-0 px-[33px] py-[2px] pl-[14px]" placeholder="Search for Color" onChange={(e) => filterSearch("color-container", e.target?.value || '')}></input>
-                            <span className="inline-block absolute cursor-pointer right-1 top-1 scale-75 w-[21px] h-[21px] bg-[url('/images/icons.png')] bg-[-754px_0] bg-[length:1404px_105px]" onClick={(e) => toggleSearchInput("color-container", false)}></span>
+                            <span className="inline-block absolute cursor-pointer right-1 top-1 scale-75 w-[21px] h-[21px] bg-[url('/images/icons.png')] bg-[-754px_0] bg-[length:1404px_105px]" onClick={(e) => toggleSearchInput(e, "color-container", false)}></span>
                         </div>
 
                         <ul className="m-0 pl-0">

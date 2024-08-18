@@ -1,28 +1,39 @@
-"use client"
-import { useEffect } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Filters from "./filters";
 import ProductsDisplay from "./products-display";
+import { useMediaQuery } from "react-responsive";
+import FilterModal from "./filter-modal";
 
 const ProductsList = () => {
-    // useEffect(() => {
-    //     window.addEventListener("scroll", function () {
-    //         const filterSection = document.querySelector(".filter-section");
-    //         const productList = document.querySelector(".product-list");
-    //         const productListHeight = productList.offsetHeight;
-    //         const scrollPosition = window.scrollY;
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 768px)'
+    });
+    const [openFilterModal, setOpenFilterModal] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
+    useEffect(() => {
+        //     window.addEventListener("scroll", function () {
+        //         const filterSection = document.querySelector(".filter-section");
+        //         const productList = document.querySelector(".product-list");
+        //         const productListHeight = productList.offsetHeight;
+        //         const scrollPosition = window.scrollY;
 
-    //         if (scrollPosition >= productListHeight - filterSection.offsetHeight) {
-    //             filterSection.classList.add("fixed");
-    //         } else {
-    //             filterSection.classList.remove("fixed");
-    //         }
-    //     });
-    // }, []);
+        //         if (scrollPosition >= productListHeight - filterSection.offsetHeight) {
+        //             filterSection.classList.add("fixed");
+        //         } else {
+        //             filterSection.classList.remove("fixed");
+        //         }
+        //     });
+        if(isDesktopOrLaptop && openFilterModal) {
+            setOpenFilterModal(false);
+        }
+        setIsDesktop(isDesktopOrLaptop);
+    }, [isDesktopOrLaptop]);
     return (
-        <div className="min-h-[750px] mt-20">
+        <div className="min-h-[750px]">
             <div>
-                <main className="mt-[58px] mb-0 mx-auto max-w-[1600px]">
+                <main className="pt-[58px] lg:pt-20 mb-0 mx-auto max-w-[1600px]">
                     <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
                         <div className="align-top pt-5 pb-0 px-0">
                             <ul className="pl-0 text-sm overflow-hidden inline-block my-0 me-0 ms-[25px] align-top">
@@ -55,8 +66,12 @@ const ProductsList = () => {
                     </div>
 
                     <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
-                        <Filters />
-                        <ProductsDisplay />
+                        {isDesktop ? (
+                            <Filters />
+                        ) :
+                            <FilterModal isOpen={openFilterModal} setIsOpen={setOpenFilterModal} />
+                        }
+                        <ProductsDisplay setIsOpen={setOpenFilterModal} />
                     </div>
                 </main>
             </div>

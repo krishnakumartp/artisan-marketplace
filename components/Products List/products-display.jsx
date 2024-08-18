@@ -36,7 +36,7 @@ const sortByOptions = [
     },
 ];
 
-const ProductsDisplay = () => {
+const ProductsDisplay = ({ setIsOpen }) => {
     const router = useRouter();
     const pathName = usePathname();
     const searchParams = useSearchParams();
@@ -121,9 +121,9 @@ const ProductsDisplay = () => {
         <div className="flex-[1_1_0%] self-start flex-wrap flex-col product-list">
             <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
                 <section className="shadow-[0_8px_8px_-4px_rgba(40,44,63,.04)] border-b-0 w-full select-none pt-[23px] pb-[15px]">
-                    <div>
-                        <div className="inline-block float-right mr-[30px] mb-0 mt-[-7px] relative top-[5px]">
-                            <div className="group px-[14px] py-[9px] text-[14px] text-[#282c3f] cursor-pointer relative w-[255px] box-border rounded-[2px] bg-white border border-[#d4d5d9] hover:shadow-[0_8px_10px_0_rgba(0,0,0,.08)]">
+                    <div className="flex flex-col lg:flex-row flex-wrap lg:justify-between lg:items-center gap-5 lg:gap-2 px-[25px] lg:px-0">
+                        <div className="flex justify-between items-center gap-2 md:inline-block float-right lg:mr-[30px] mb-0 mt-[-7px] relative top-[5px] order-1 lg:order-2">
+                            <div className="group px-[14px] py-[9px] text-[14px] text-[#282c3f] cursor-pointer relative w-[200px] box-border rounded-[2px] bg-white border border-[#d4d5d9] hover:shadow-[0_8px_10px_0_rgba(0,0,0,.08)]">
                                 Sort By : {" "}
                                 <span className="capitalize font-bold text-[#282c3f]">{sortBy}</span>
                                 <span className="capitalize font-bold text-[#282c3f] ml-[5px] mt-[5px] float-right bg-[url('/images/icons.png')] bg-[length:1404px_105px] bg-[-367px_-1px] w-[15px] h-[10px] inline-block">
@@ -140,10 +140,13 @@ const ProductsDisplay = () => {
                                     ))}
                                 </ul>
                             </div>
+                            <button className="md:hidden py-[7px] px-3.5 border float-right text-[#ff3f6c] border-[#ff3f6c] rounded-sm" onClick={() => setIsOpen(true)}>
+                                Filter
+                            </button>
                         </div>
 
-                        <div>
-                            <ul className="pl-0 text-sm flex text-[#282c3f] flex-row flex-wrap -m-2.5 me-0 mb-0 ms-4">
+                        <div className="order-2 lg:order-1">
+                            <ul className="pl-0 text-sm flex text-[#282c3f] flex-row flex-wrap -m-2.5 me-0 mb-0 lg:ms-4">
                                 <li className="mr-1 mb-0 mt-2.5 cursor-pointer">
                                     <label className="cursor-pointer whitespace-nowrap relative pt-[5px] pe-2 pb-[5px] ps-2.5 hover:rounded-[20px] hover:bg-[#f4f4f5]">
                                         <h4 className="pl-0 font-normal m-0 inline-block">Bundles</h4>
@@ -185,7 +188,7 @@ const ProductsDisplay = () => {
                 <div className="pl-[15px] pt-6 pr-5 flex flex-row flex-wrap justify-start items-stretch content-stretch">
                     <section className="w-full">
                         <div className="opacity-100 visible z-10 right-[30px] mt-[-25px] top-[95%] fixed cursor-pointer w-[40px] h-[40px] bg-[url('/images/icons.png')] bg-[length:1404px_105px] bg-[position:-286px_0] inline-block" onClick={() => window.scrollTo(0, 0)}></div>
-                        <ul className="pl-0 flex flex-row flex-wrap items-stretch content-stretch m-[0_-10px_0_3px] w-full justify-between">
+                        <ul className="pl-0 flex flex-row flex-wrap items-stretch content-stretch m-[0_-10px_0_3px] w-full justify-center xxs:justify-between">
                             {products.map(elm =>
                                 <ProductCard key={elm.id} data={elm} />
                             )}
