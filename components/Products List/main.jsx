@@ -5,6 +5,7 @@ import Filters from "./filters";
 import ProductsDisplay from "./products-display";
 import { useMediaQuery } from "react-responsive";
 import FilterModal from "./filter-modal";
+import { Suspense } from 'react'
 
 const ProductsList = () => {
     const isDesktopOrLaptop = useMediaQuery({
@@ -31,6 +32,7 @@ const ProductsList = () => {
         setIsDesktop(isDesktopOrLaptop);
     }, [isDesktopOrLaptop]);
     return (
+        <Suspense>
         <div className="min-h-[750px]">
             <div>
                 <main className="pt-[58px] lg:pt-20 mb-0 mx-auto max-w-[1600px]">
@@ -76,6 +78,7 @@ const ProductsList = () => {
                 </main>
             </div>
         </div>
+        </Suspense>
     );
 };
 

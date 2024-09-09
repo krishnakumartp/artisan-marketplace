@@ -192,7 +192,7 @@ const ProductView = () => {
                                                             <span className="text-sm ml-1.5 font-bold text-[#535665]">Thigh - 23.0 in</span>
                                                         </div>
                                                         <div className="text-[#535665] mt-[5px] text-[12px]">
-                                                            <div>Fit: Regular Fit<br />The model (height 6') is wearing a size 32</div>
+                                                            <div>Fit: Regular Fit<br />The model (height 6&apos;) is wearing a size 32</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -378,7 +378,7 @@ const ProductView = () => {
                                         <div className="text-[#282c3f] leading-[1.4] text-[16px] mt-[12px] w-[84%]">
                                             <ul className="p-0 mb-2.5">
                                                 <li> Fit: Regular Fit </li>
-                                                <li> The model (height 6') is wearing a size 32 </li>
+                                                <li> The model (height 6&apos;) is wearing a size 32 </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -548,7 +548,7 @@ const ProductView = () => {
                                                         </span>
                                                     </div>
                                                     <div className="text-[16px] text-[#282c3f] leading-5 w-full text-balance">
-                                                        I recently purchased this cargo pant and I must say, I'm impressed with its quality which has been provided at this price point and fit. The material feels durable and the stitching is well done, ensuring longevity. The cargo pockets add both functionality and style. Overall, I'm quite satisfied with this purchase and would recommend it to anyone in need of a reliable and comfortable cargo pant.
+                                                        I recently purchased this cargo pant and I must say, I&apos;m impressed with its quality which has been provided at this price point and fit. The material feels durable and the stitching is well done, ensuring longevity. The cargo pockets add both functionality and style. Overall, I&apos;m quite satisfied with this purchase and would recommend it to anyone in need of a reliable and comfortable cargo pant.
                                                     </div>
                                                     <div className="inline-flex">
                                                         <div className="flex -mx-[5px]">
