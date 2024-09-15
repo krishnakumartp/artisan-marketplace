@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className="float-left border-0 text-center">
               <div className="inline group">
                 <Link
-                  href="/shop/men"
+                  href="/product-list"
                   className="px-[17px] pt-0 pb-[28px] text-center text-sm tracking-[0.3px] text-[#282c3f] border-b-4 border-b-transparent transition-all duration-200 group-hover:duration-500 group-hover:ease-in ease-out font-bold uppercase group-hover:border-b-[#ee5f73]"
                 >
                   Cloths
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="float-left border-0 text-center">
               <div className="inline group">
                 <Link
-                  href="/shop/men"
+                  href="/product-list"
                   className="px-[17px] pt-0 pb-[28px] text-center text-sm tracking-[0.3px] text-[#282c3f] border-b-4 border-b-transparent transition-all duration-200 group-hover:duration-500 group-hover:ease-in ease-out font-bold uppercase group-hover:border-b-[#ee5f73]"
                 >
                   Art Work
