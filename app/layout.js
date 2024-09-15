@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Navbar from "@/components/Navbar/navbar";
 import MobileNavbar from "@/components/Navbar/mobile-navbar";
+// import Footer from "@/components/Footer/footer";
 
 const assistant = Assistant({ subsets: ["hebrew", "latin", "latin-ext"], display: 'auto' });
 
@@ -19,6 +20,7 @@ export default function RootLayout ({ children }) {
         <Navbar />
         <MobileNavbar />
         {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );

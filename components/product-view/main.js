@@ -605,7 +605,6 @@ const ProductView = () => {
                                 </div>
                             </div>
                         </div>
-                        <div></div>
                     </div>
                 </main>
             </div>
