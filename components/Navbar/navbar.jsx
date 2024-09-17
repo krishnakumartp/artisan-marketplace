@@ -11,7 +11,7 @@ const Navbar = () => {
           <a href="/">
             <Image
               src={Logo}
-              className="inline-block align-middle p-0 m-0 w-[53px] h-[36px] bg-[-462px_0px] bg-[url('/images/logo-1.avif')] bg-[length:1404px_105px]"
+              className="h-auto inline-block align-middle p-0 m-0 w-[53px] h-[36px] bg-[-462px_0px] bg-[url('/images/logo-1.avif')] bg-[length:1404px_105px]"
             />
             {/* <a href="/" className="inline-block align-middle p-0 m-0 w-[53px] h-[36px] bg-[-462px_0px] bg-[url('/images/logo-1.avif')] bg-[length:1404px_105px]"></a> */}
           </a>
