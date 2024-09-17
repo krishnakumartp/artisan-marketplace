@@ -28,22 +28,14 @@ const Navbar = () => {
                   Cloths
                 </Link>
                 <div className="fixed top-20 bottom-0 left-0 right-0 bg-[#0000004d] z-0 pointer-events-none invisible group-hover:visible">
-                  <div className="left-[50%] -ms-[570px] h-[150px] w-[300px] z-[1px] invisible text-left opacity-0 absolute top-0 bg-white transition-all duration-300 ease-out shadow-[inset_0_0_8px_rgba(0,0,0,.1)] pointer-events-auto group-hover:visible group-hover:opacity-100 group-hover:delay-150">
+                  <div className="left-[50%] -ms-[570px] h-[100px] w-[300px] z-[1px] invisible text-left opacity-0 absolute top-0 bg-white transition-all duration-300 ease-out shadow-[inset_0_0_8px_rgba(0,0,0,.1)] pointer-events-auto group-hover:visible group-hover:opacity-100 group-hover:delay-150">
                     <div className="invisible opacity-0 overflow-auto w-[1110px] left-0 right-0 absolute my-0 mx-auto pt-0 pe-[10px] pb-[10px] ps-[15px] transition-all duration-200 ease-out group-hover:visible group-hover:opacity-100 group-hover:delay-150">
                       <li className="float-left block relative h-[436px] pt-1">
                         <ul className="block relative float-left w-[216px] m-0 p-0">
                           <li className="ps-[25px]">
                             <Link
                               href="/"
-                              className="text-[#ee5f73] block text-sm capitalize pt-3 pb-[2px] px-0 whitespace-nowrap text-ellipsis overflow-hidden leading-[25px] font-bold"
-                            >
-                              Women
-                            </Link>
-                          </li>
-                          <li className="ps-[25px]">
-                            <Link
-                              href="/"
-                              className="text-[#283c3f] !leading-[23px] font-normal block text-sm hover:font-bold hover:outline-0"
+                              className="text-[#283c3f] !leading-[23px] font-normal block text-sm pt-3 pb-[2px] px-0  hover:font-bold hover:outline-0"
                             >
                               Saree
                             </Link>
@@ -65,22 +57,14 @@ const Navbar = () => {
                   Art Work
                 </Link>
                 <div className="fixed top-20 bottom-0 left-0 right-0 bg-[#0000004d] z-0 pointer-events-none invisible group-hover:visible">
-                  <div className="left-[50%] -ms-[570px] h-[150px] w-[300px] z-[1px] invisible text-left opacity-0 absolute top-0 bg-white transition-all duration-300 ease-out shadow-[inset_0_0_8px_rgba(0,0,0,.1)] pointer-events-auto group-hover:visible group-hover:opacity-100 group-hover:delay-150">
+                  <div className="left-[50%] -ms-[570px] h-[100px] w-[300px] z-[1px] invisible text-left opacity-0 absolute top-0 bg-white transition-all duration-300 ease-out shadow-[inset_0_0_8px_rgba(0,0,0,.1)] pointer-events-auto group-hover:visible group-hover:opacity-100 group-hover:delay-150">
                     <div className="invisible opacity-0 overflow-auto w-[1110px] left-0 right-0 absolute my-0 mx-auto pt-0 pe-[10px] pb-[10px] ps-[15px] transition-all duration-200 ease-out group-hover:visible group-hover:opacity-100 group-hover:delay-150">
                       <li className="float-left block relative h-[436px] pt-1">
                         <ul className="block relative float-left w-[216px] m-0 p-0">
                           <li className="ps-[25px]">
                             <Link
                               href="/"
-                              className="text-[#ee5f73] block text-sm capitalize pt-3 pb-[2px] px-0 whitespace-nowrap text-ellipsis overflow-hidden leading-[25px] font-bold"
-                            >
-                              Work
-                            </Link>
-                          </li>
-                          <li className="ps-[25px]">
-                            <Link
-                              href="/"
-                              className="text-[#283c3f] !leading-[23px] font-normal block text-sm hover:font-bold hover:outline-0"
+                              className="text-[#283c3f] !leading-[23px] font-normal block text-sm pt-3 pb-[2px] px-0 hover:font-bold hover:outline-0"
                             >
                               Home Decorative Accessories
                             </Link>
