@@ -1,12 +1,34 @@
 "use client";
+import { useEffect, useState } from "react";
 import { sliderSettings } from "@/configs/slider-config";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
-import categoryType from "/data/home-cards/category-type.json";
+//import categoryType from "../../data/home-cards/category-type.json";
+import ProductService from "/server/api/productService"; // Adjust the import path as necessary
 
 
 const HeroSection = () => {
+    const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await ProductService.getAllProducts(); // Adjust the method name as necessary
+        console.log("API Response:", response);
+        if (response && response) {
+            console.log("Products fetched successfully", response);
+            setProducts(response);
+          } else {
+            console.error("No data returned from API");
+          }
+      } catch (error) {
+        console.error("Failed to fetch products", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
     return (
         <div className="">
             {/* App Advertisement Banner */}
@@ -106,7 +128,7 @@ const HeroSection = () => {
                 </div>
                
                 {/* Category Rows */}
-                {categoryType?.map((category, index) =>
+               {/* {categoryType?.map((category, index) =>
                     <div className="mx-w-full my-0 mx-auto box-border w-full relative overflow-hidden bg-no-repeat" key={index}>
                         <div className="my-0 mx-auto">
                             <div className="flex flex-wrap justify-center items-stretch gap-5">
@@ -137,8 +159,42 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                )}
-            </div>
+                )} */}
+       
+       <div className="mx-w-full my-0 mx-auto box-border w-full relative overflow-hidden bg-no-repeat" >
+                        <div className="my-0 mx-auto">
+                            <div className="flex flex-wrap justify-center items-stretch gap-5">
+                          
+                {products.map((item) => (
+                  <div
+                    key={item.id}
+                    className="w-[calc(100%-40px)] xs:w-[calc(50%-30px)] md:w-[calc(33.3333%-30px)] lg:w-[calc(16.6667%-30px)] box-border relative overflow-hidden bg-no-repeat"
+                  >
+                    <div className="pb-[130.62%]">
+                      <div className="absolute inset-0">
+                        <Link href="/product-list">
+                          <picture draggable="false" className="img-responsive">
+                            <source srcSet={item?.masterData?.current?.masterVariant?.images[0]?.url} type="image/webp" />
+                            <Image
+                              draggable="false"
+                              className="absolute inset-0 h-auto w-full transition-all duration-200 ease-in-out"
+                              src={item?.masterData?.current?.masterVariant?.images[0]?.url}
+                              alt="Category Products"
+                              width={320}
+                              height={418}
+                            />
+                          </picture>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              
+           </div>
+           </div>
+           </div>
+          
+    </div>
         </div>
     );
 };

@@ -7,6 +7,11 @@ const nextConfig = {
                 hostname: '**.myntassets.com',
                 port: '',
             },
+            {
+                protocol: 'https',
+                hostname: 'storage.googleapis.com',
+                port: '',
+            },
         ],
     },
 };
