@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 //import categoryType from "../../data/home-cards/category-type.json";
-import ProductService from "/server/api/productService"; // Adjust the import path as necessary
+import ProductService from "@/server/api/productService"; // Adjust the import path as necessary
 
 
 const HeroSection = () => {

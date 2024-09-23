@@ -89,6 +89,16 @@ const ProductService = {
             throw error;
         }
     },
+    searchProducts: async (searchCriteria) => {
+        try {
+            const response = await apiRoot.products().search().post({ body: searchCriteria }).execute();
+            console.log('response.body.results', response.body.results);
+            return response.body.results;
+        } catch (error) {
+            console.error('Error searching products:', error);
+            throw error;
+        }
+    },
 };
 
 module.exports = ProductService;
