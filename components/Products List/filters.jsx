@@ -149,11 +149,9 @@ const Filters = ({ isOpen }) => {
                                 </li>
                             ))}
                         </ul>
-
-                        <div className=" cursor-pointer mt-2.5 text-[15px] ml-[27px] text-[#ff3f6c]">+ 198 more</div>
                     </div>
 
-                    <div className="relative pt-[20px] pb-[15px] pl-[25px] border-b-[1px] border-b-[#e9e9ed] border-r-[1px] border-r-[#edebef]">
+                    {/* <div className="relative pt-[20px] pb-[15px] pl-[25px] border-b-[1px] border-b-[#e9e9ed] border-r-[1px] border-r-[#edebef]">
                         <span className="font-bold uppercase text-[14px] mb-[18px] clear-both text-[#282c3f] block">Brand</span>
 
                         <div className="absolute top-[12px] right-[14px] w-[30px] h-[30px] bg-[#f5f5f6] rounded-full" id="brand-container" onClick={(e) => toggleSearchInput(e, "brand-container", true)}>
@@ -175,7 +173,7 @@ const Filters = ({ isOpen }) => {
                         </ul>
 
                         <div className=" cursor-pointer mt-2.5 text-[15px] ml-[27px] text-[#ff3f6c]">+ 728 more</div>
-                    </div>
+                    </div> */}
 
                     <div className="relative pt-[20px] pb-[15px] pl-[25px] border-b-[1px] border-b-[#e9e9ed] border-r-[1px] border-r-[#edebef]">
                         <span className="font-bold uppercase text-[14px] mb-[18px] clear-both text-[#282c3f] block">Price</span>

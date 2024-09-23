@@ -34,7 +34,7 @@ const Navbar = () => {
                         <ul className="block relative float-left w-[216px] m-0 p-0">
                           <li className="ps-[25px]">
                             <Link
-                              href="/"
+                              href="/product-list?sort=recommanded&category=Sarees"
                               className="text-[#283c3f] !leading-[23px] font-normal block text-sm pt-3 pb-[2px] px-0  hover:font-bold hover:outline-0"
                             >
                               Saree
@@ -63,7 +63,7 @@ const Navbar = () => {
                         <ul className="block relative float-left w-[216px] m-0 p-0">
                           <li className="ps-[25px]">
                             <Link
-                              href="/"
+                              href="/product-list?sort=recommanded&category=Home+Decorative+Accessories"
                               className="text-[#283c3f] !leading-[23px] font-normal block text-sm pt-3 pb-[2px] px-0 hover:font-bold hover:outline-0"
                             >
                               Home Decorative Accessories
@@ -71,7 +71,7 @@ const Navbar = () => {
                           </li>
                           <li className="ps-[25px]">
                             <Link
-                              href="/"
+                              href="/product-list?sort=recommanded&category=Painting"
                               className="text-[#283c3f] !leading-[23px] font-normal block text-sm hover:font-bold hover:outline-0"
                             >
                               Painting
@@ -79,7 +79,7 @@ const Navbar = () => {
                           </li>
                           <li className="ps-[25px]">
                             <Link
-                              href="/"
+                              href="/product-list?sort=recommanded&category=Mural"
                               className="text-[#283c3f] !leading-[23px] font-normal block text-sm hover:font-bold hover:outline-0"
                             >
                               Mural

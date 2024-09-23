@@ -28,7 +28,7 @@ const ProductCard = ({ data ,ctdata}) => {
 
     const initializeSlider = () => {
         if (showSlider) return;
-        setShowSlider(true);
+        setShowSlider(false);
     };
 
     const closeSlider = () => {
@@ -53,7 +53,7 @@ const ProductCard = ({ data ,ctdata}) => {
             <Link href="/product-view/black" className="block" target="_blank">
                 {/* Image and Hover Slider */}
                 <div className="relative w-[210px] h-[280px]">
-                    {showSlider ?
+                    {/* {showSlider ?
                         <Slider {...customSliderSettings}>
                             {Array.from({ length: 8 }, (_, index) => index + 1).map(elm =>
                                 <div className="block absolute top-0 h-[280px] !w-fit" key={elm}>
@@ -93,7 +93,7 @@ const ProductCard = ({ data ,ctdata}) => {
                             )}
                         </Slider>
                         : null
-                    }
+                    } */}
                     <div className={`absolute top-0 h-full w-full ${showSlider ? 'hidden' : 'block'}`}>
                         <div className="bg">
                             <div className="h-[280px] w-full">
@@ -149,20 +149,20 @@ const ProductCard = ({ data ,ctdata}) => {
             </Link>
 
             {/* View Similar Products Button */}
-            <div className="group/similar group-hover:block w-[30px] h-[30px] leading-[26px] text-[12px] right-[12px] top-[207px] hidden z-[1] rounded-full absolute text-[#000] bottom-[20px] border border-[#dadade] text-center overflow-hidden cursor-pointer transition-all duration-200 ease-in-out will-change-[contents] bg-[#fff] hover:rounded-[42px] hover:w-[140px] hover:text-left hover:pl-[13px]">
+            {/* <div className="group/similar group-hover:block w-[30px] h-[30px] leading-[26px] text-[12px] right-[12px] top-[207px] hidden z-[1] rounded-full absolute text-[#000] bottom-[20px] border border-[#dadade] text-center overflow-hidden cursor-pointer transition-all duration-200 ease-in-out will-change-[contents] bg-[#fff] hover:rounded-[42px] hover:w-[140px] hover:text-left hover:pl-[13px]">
                 <span className=" first:bg-[length:6000%_486.36%] first:bg-[position:10.4%_71%] first:w-[15px] first:h-[13px] align-middle bg-[position:-142px_-58px] w-6 h-5 bg-[url('/images/icons.png')] bg-[length:1404px_105px] inline-block"></span>
                 <span className="[&:nth-child(2)]:text-[12px] [&:nth-child(2)]:mt-0 [&:nth-child(2)]:ml-1.5 font-bold text-[#ff517b] align-middle invisible ml-[10px] text-[14px] group-hover/similar:visible group-hover/similar:inline-block">
                     VIEW SIMILAR
                 </span>
-            </div>
+            </div> */}
 
             {/* Wishlist Button */}
-            <div className="group-hover:flex hidden absolute z-[3] left-0 top-[250px] bg-white w-full p-[15px_10px] box-border flex-nowrap justify-between">
+            {/* <div className="group-hover:flex hidden absolute z-[3] left-0 top-[250px] bg-white w-full p-[15px_10px] box-border flex-nowrap justify-between">
                 <span className="w-full text-center inline-flex justify-center items-center flex-row rounded-sm border border-[#d4d5d9] text-[#282c3f] tracking-[0.3] font-bold text-[12px] uppercase cursor-pointer px-[12px] py-[8px] box-border">
                     <span className="m-[-4px_8px] w-[17px] h-[22px] bg-[url(/images/icons.png)] bg-[length:1404px_105px] bg-[-315px_-186px] inline-block"></span>
                     wishlist
                 </span>
-            </div>
+            </div> */}
         </li>
     );
 };

@@ -1,22 +1,27 @@
 [
     {
-        "label": "Rs. 222 to Rs. 4275",
-        "value": "Rs. 222 to Rs. 4275",
-        "count": "508472"
+        "label": "Rs. 0 to Rs. 199",
+        "value": "Rs. 0 to Rs. 199",
+        "count": "1000"
     },
     {
-        "label": "Rs. 4275 to Rs. 8328",
-        "value": "Rs. 4275 to Rs. 8328",
-        "count": "25827"
+        "label": "Rs. 200 to Rs. 1199",
+        "value": "Rs. 200 to Rs. 1199",
+        "count": "2000"
+    },
+    {
+        "label": "Rs. 1200 to Rs. 8327",
+        "value": "Rs. 1200 to Rs. 8327",
+        "count": "3000"
     },
     {
         "label": "Rs. 8328 to Rs. 12381",
         "value": "Rs. 8328 to Rs. 12381",
-        "count": "5920"
+        "count": "400"
     },
     {
-        "label": "Rs. 12381 to Rs. 16434",
-        "value": "Rs. 12381 to Rs. 16434",
-        "count": "1949"
+        "label": "Rs. 12381 to Rs. 106434",
+        "value": "Rs. 12381 to Rs. 106434",
+        "count": "5000"
     }
 ]

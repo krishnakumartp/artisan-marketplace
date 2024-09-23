@@ -37,7 +37,7 @@ const ProductsList = () => {
       <div className="min-h-[750px]">
         <div>
           <main className="pt-[58px] lg:pt-20 mb-0 mx-auto max-w-[1600px]">
-            <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
+            {/* <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
               <div className="align-top pt-5 pb-0 px-0">
                 <ul className="pl-0 text-sm overflow-hidden inline-block my-0 me-0 ms-[25px] align-top">
                   <li className="align-top float-left text-sm inline-block capitalize leading-[1px] mr-[5px] after:text-sm after:content-['/'] after:ml-[5px] after:text-[#282c3f]">
@@ -57,9 +57,9 @@ const ProductsList = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
+            {/* <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
               <div className="mt-2.5 mr-0 mb-[5px] ml-[25px] flex items-center max-w-[1000px] overflow-hidden">
                 <h1 className="font-bold text-ellipsis overflow-hidden whitespace-nowrap text-[#282c3f] max-w-[400px] capitalize inline-block text-base m-0">
                   Fusion Wear for Women
@@ -69,7 +69,7 @@ const ProductsList = () => {
                   - 414546 items
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex flex-row flex-wrap items-stretch content-stretch justify-start after:clear-both after:content-[''] after:table">
               {isDesktop ? (

@@ -209,7 +209,6 @@ const ProductsDisplay = ({ setIsOpen }) => {
 
                 <div className="pl-[15px] pt-6 pr-5 flex flex-row flex-wrap justify-start items-stretch content-stretch">
                     <section className="w-full">
-                        <div className="opacity-100 visible z-10 right-[30px] mt-[-25px] top-[95%] fixed cursor-pointer w-[40px] h-[40px] bg-[url('/images/icons.png')] bg-[length:1404px_105px] bg-[position:-286px_0] inline-block" onClick={() => window.scrollTo(0, 0)}></div>
                         <ul className="pl-0 flex flex-row flex-wrap items-stretch content-stretch m-[0_-10px_0_3px] w-full justify-center xxs:justify-between">
                             {ctproducts.map(elm =>
                                 <ProductCard key={elm.id} data={products} ctdata={elm} />
