@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import ProductCard from "./product-card";
 import productData from "/data/product-list/demo-products.json";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import ProductService from "@/server/api/productService"; // Adjust the import path as necessary
+import ProductService from "../../server/api/productservice"; // Adjust the import path as necessary
 
 const sortByOptions = [
     {
