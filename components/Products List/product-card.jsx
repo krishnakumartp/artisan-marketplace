@@ -23,7 +23,7 @@ const customSliderSettings = {
     ),
 };
 
-const ProductCard = ({ data }) => {
+const ProductCard = ({ data ,ctdata}) => {
     const [showSlider, setShowSlider] = useState(false);
 
     const initializeSlider = () => {
@@ -42,11 +42,11 @@ const ProductCard = ({ data }) => {
 
             {/* Rating */}
             <div className="z-[1] absolute ml-[10px] mt-[250px] text-[12px] font-bold flex items-center justify-center rounded-[2px] pl-[4px] bg-[hsla(0,0%,100%,0.8)]">
-                <span>{data.rating}</span>
+                <span>{data[0].rating}</span>
                 <span className="ml-[-2px] scale-[0.55] bg-[url(/images/icons.png)] bg-[position:-171px_-28px] bg-[size:1404px_105px] w-[24px] h-[24px] inline-block"></span>
                 <div className="flex pr-1">
                     <div className="text-[10px] m-[-.5px_6px_0_-2px]">|</div>
-                    {data.ratedBy}
+                    {data[0].ratedBy}
                 </div>
             </div>
 
@@ -57,15 +57,29 @@ const ProductCard = ({ data }) => {
                         <Slider {...customSliderSettings}>
                             {Array.from({ length: 8 }, (_, index) => index + 1).map(elm =>
                                 <div className="block absolute top-0 h-[280px] !w-fit" key={elm}>
-                                    <div className="bg-[#fff2df]">
+                                    <div className="bg">
                                         <div className="h-[280px] w-full">
                                             <picture draggable="false" className="img-responsive w-full h-full block">
-                                                <source
-                                                    srcSet="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg , https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 1.5x, https://assets.myntassets.com/f_webp,dpr_1.8,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 1.8x, https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.0x, https://assets.myntassets.com/f_webp,dpr_2.2,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.2x, https://assets.myntassets.com/f_webp,dpr_2.4,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.4x, https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.6x, https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.8x" type="image/webp"
-                                                />
+                                            {ctdata?.masterData?.current?.masterVariant?.images.map((img, idx) => (
+                                        <source
+                                            key={idx}
+                                            srcSet={`
+                                                ${img.url} 1x,
+                                                ${img.url} 1.5x,
+                                                ${img.url} 1.8x,
+                                                ${img.url} 2x,
+                                                ${img.url} 2.2x,
+                                                ${img.url} 2.4x,
+                                                ${img.url} 2.6x,
+                                                ${img.url} 2.8x
+                                            `}
+                                            type="image/webp"
+                                        />
+                                    ))}
+                                                
                                                 <Image
                                                     draggable="false"
-                                                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg"
+                                                    src={ctdata?.masterData?.current?.masterVariant?.images[0].url}
                                                     className="img-responsive w-full block"
                                                     alt="ANAND SAREES Women Pack of 2 Printed Sarees"
                                                     title="ANAND SAREES Women Pack of 2 Printed Sarees"
@@ -81,15 +95,28 @@ const ProductCard = ({ data }) => {
                         : null
                     }
                     <div className={`absolute top-0 h-full w-full ${showSlider ? 'hidden' : 'block'}`}>
-                        <div className="bg-[#fff2df]">
+                        <div className="bg">
                             <div className="h-[280px] w-full">
                                 <picture draggable="false" className="img-responsive w-full h-full block">
-                                    <source
-                                        srcSet="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg , https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 1.5x, https://assets.myntassets.com/f_webp,dpr_1.8,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 1.8x, https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.0x, https://assets.myntassets.com/f_webp,dpr_2.2,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.2x, https://assets.myntassets.com/f_webp,dpr_2.4,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.4x, https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.6x, https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg 2.8x" type="image/webp"
-                                    />
+                                {ctdata?.masterData?.current?.masterVariant?.images.map((img, idx) => (
+                                        <source
+                                            key={idx}
+                                            srcSet={`
+                                                ${img.url} 1x,
+                                                ${img.url} 1.5x,
+                                                ${img.url} 1.8x,
+                                                ${img.url} 2x,
+                                                ${img.url} 2.2x,
+                                                ${img.url} 2.4x,
+                                                ${img.url} 2.6x,
+                                                ${img.url} 2.8x
+                                            `}
+                                            type="image/webp"
+                                        />
+                                    ))}
                                     <Image
                                         draggable="false"
-                                        src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/14429338/2021/6/21/9e2a9a16-2f41-4b34-b0e6-c0ce7fc50c171624267211436KALINIPackof2PrintedSareesSareesKALINIWomenSareesKALINIWomen1.jpg"
+                                        src={ctdata?.masterData?.current?.masterVariant?.images[0].url}
                                         className="img-responsive w-full block"
                                         alt="ANAND SAREES Women Pack of 2 Printed Sarees"
                                         title="ANAND SAREES Women Pack of 2 Printed Sarees"
@@ -104,20 +131,20 @@ const ProductCard = ({ data }) => {
 
                 {/* Title, Price and Discount Details */}
                 <div className="relative z-[3] bg-[#fff] px-[10px] h-full mt-[12px] box-border">
-                    <h3 className="mt-inherit mb-[6px] text-[16px] font-bold leading-[1] text-[#282c3f] overflow-hidden text-ellipsis whitespace-nowrap">{data.brandName}</h3>
-                    <h4 className="group-hover:hidden pl-0 text-[#535766] text-[14px] leading-[1] font-normal mb-0 mt-0 overflow-hidden text-ellipsis whitespace-nowrap block">{data.desc}</h4>
+                    <h3 className="mt-inherit mb-[6px] text-[16px] font-bold leading-[1] text-[#282c3f] overflow-hidden text-ellipsis whitespace-nowrap">{ctdata?.masterData?.current?.name['en-US']}</h3>
+                    <h4 className="group-hover:hidden pl-0 text-[#535766] text-[14px] leading-[1] font-normal mb-0 mt-0 overflow-hidden text-ellipsis whitespace-nowrap block">{ctdata?.masterData?.current?.name['en-US']}</h4>
                     <h4 className="group-hover:block pl-0 text-[#535766] text-[14px] leading-none font-normal mb-0 mt-0 overflow-hidden text-ellipsis whitespace-nowrap hidden">
                         Sizes
-                        <span className="text-[#535665]">{data.sizes}</span>
+                        <span className="text-[#535665]">{data[0].sizes}</span>
                     </h4>
                     <div className="text-[14px] leading-[15px] text-[#282c3f] whitespace-nowrap mt-[10px] mb-[6px] font-bold">
                         <span>
-                            <span className="text-sm font-bold text-[282c3f]">RS. {data.price}</span>
-                            <span className="line-through text-[#7e818c] font-normal ml-[5px] text-[12px]">RS. {data.checkedPrice}</span>
+                            <span className="text-sm font-bold text-[282c3f]">RS. {ctdata?.masterData?.current?.masterVariant?.prices[0]?.value.centAmount}</span>
+                            <span className="line-through text-[#7e818c] font-normal ml-[5px] text-[12px]">RS. {ctdata?.masterData?.current?.masterVariant?.prices[0]?.value.centAmount}</span>
                         </span>
-                        <span className="text-[#ff905a] font-normal text-[12px] ml-[5px]">({data.discount}% OFF)</span>
+                        <span className="text-[#ff905a] font-normal text-[12px] ml-[5px]">({data[0].discount}% OFF)</span>
                     </div>
-                    <div className="text-[12px] text-[#ff5722] text-left font-bold">{data.isFewLeft ? "Only Few Left!" : ''}</div>
+                    <div className="text-[12px] text-[#ff5722] text-left font-bold">{data[0].isFewLeft ? "Only Few Left!" : ''}</div>
                 </div>
             </Link>
 

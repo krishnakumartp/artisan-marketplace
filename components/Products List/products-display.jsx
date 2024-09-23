@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import ProductCard from "./product-card";
 import productData from "/data/product-list/demo-products.json";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import ProductService from "/server/api/productService"; // Adjust the import path as necessary
+import Products from "@/app/product-list/page";
 
 const sortByOptions = [
     {
@@ -44,6 +46,27 @@ const ProductsDisplay = ({ setIsOpen }) => {
     const [products, setProducts] = useState([]);
     const [filters, setFilters] = useState({});
 
+
+    const [ctproducts, setCTProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchCTProducts = async () => {
+      try {
+        const response = await ProductService.getAllProducts(); // Adjust the method name as necessary
+        console.log("API Response:", response);
+        if (response && response) {
+            console.log("Products fetched successfully", response);
+            setCTProducts(response);
+          } else {
+            console.error("No data returned from API");
+          }
+      } catch (error) {
+        console.error("Failed to fetch products", error);
+      }
+    };
+
+    fetchCTProducts();
+  }, []);
     const createQueryString = useCallback(
         (name, value, isChecked) => {
             const params = new URLSearchParams(searchParams.toString());
@@ -189,8 +212,8 @@ const ProductsDisplay = ({ setIsOpen }) => {
                     <section className="w-full">
                         <div className="opacity-100 visible z-10 right-[30px] mt-[-25px] top-[95%] fixed cursor-pointer w-[40px] h-[40px] bg-[url('/images/icons.png')] bg-[length:1404px_105px] bg-[position:-286px_0] inline-block" onClick={() => window.scrollTo(0, 0)}></div>
                         <ul className="pl-0 flex flex-row flex-wrap items-stretch content-stretch m-[0_-10px_0_3px] w-full justify-center xxs:justify-between">
-                            {products.map(elm =>
-                                <ProductCard key={elm.id} data={elm} />
+                            {ctproducts.map(elm =>
+                                <ProductCard key={elm.id} data={products} ctdata={elm} />
                             )}
                         </ul>
                     </section>
